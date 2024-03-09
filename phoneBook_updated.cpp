@@ -36,9 +36,9 @@ class phoneBook{
             cout<<"Name is not present in the Phone Book."<<endl;
             return;
         }
-        void exit(){
+        void exitPhoneBook(){
             cout<<"Thank you for using Phone Book"<<endl;
-            exit();
+            exit(0);
         }
 };
 int main(){
@@ -48,18 +48,19 @@ int main(){
         cout<<"Select   1.Add   2.Search    3.Exit"<<endl;
         int inp;
         cin>>inp;
-        switch(inp){
+        switch (inp){
             case 1:
                 pb.add();
                 break;
-            case 2:
-                // string s;
-                // cout<<"Enter the name you want to search in the Phone Book : ";
-                // cin>>s;
-                // pb.search(s);
+            case 2:{  //{ } is used for the block scope property.
+                string s;
+                cout<<"Enter the name you want to search in the Phone Book : ";
+                cin>>s;
+                pb.search(s);
                 break;
+                }
             case 3:
-                pb.exit();
+                pb.exitPhoneBook();
                 break;
             default:
                 cout<<"Please enter a valid Input"<<endl;
