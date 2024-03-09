@@ -29,7 +29,7 @@ class phoneBook{
         void search(string name){
             for(int i=0;i<8;i++){
                 if(names[i]==name){
-                    cout<<contacts[i]<<endl;
+                    cout<<"Contact number of "<<name<<" is "<<contacts[i]<<endl;
                     return;
                 }
             }
@@ -45,7 +45,7 @@ int main(){
     phoneBook pb;
     cout<<"WELCOME TO PHONEBOOK"<<endl;
     while(1){
-        cout<<"Select   1.Add   2.Search    3.Exit"<<endl;
+        cout<<"Select by numbering :   1.Add   2.Search    3.Exit"<<endl;
         int inp;
         cin>>inp;
         switch (inp){
